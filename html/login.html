@@ -10,11 +10,11 @@
 
   <body>
     <div class="box">
-		<form autocomplete="off">
+		<form autocomplete="on">
 			<h2>Sign in</h2>
 
 			<div class="inputBox">
-				<input type="text" required="required" id="shaking" class="changeUserName" pattern="[A-Za-z-' ']*">
+				<input type="text" required="required" id="shaking" maxlength="30" class="changeUserName" pattern="[A-Za-z-' ']*">
 				<span>UserName</span>
 				<i></i>
 			</div>
@@ -23,10 +23,6 @@
 				<input type="password" required="required" maxlength="10">
 				<span>Password</span>
 				<i></i>
-			</div>
-
-			<div class="links">
-				<a href="">Signup</a>
 			</div>
 
             <div class="last">
