@@ -111,7 +111,10 @@ input {
   }
 
   .inner-div {
-    width: 50vh;
+    width: auto;
+    height: auto;
+    margin-left:  10px;
+    margin-right: 10px;
   }
 
   .inner-div h2 {
@@ -134,13 +137,15 @@ input {
 
   #Submit,
   .btn {
-    margin-left: 120px;
+    margin-left: -25px;
     border-radius: 10vh;
     box-shadow: 0 1.1rem 1.3rem -0.8rem;
+    margin-bottom: 1px;
   }
 
   #Submit:hover {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    transition: all 0.1ms ease-in-out 0.1s;
   }
 
   #showScore {
@@ -154,6 +159,14 @@ input {
   .scoreArea {
     display: none;
   }
+
+  #feedback {
+    cursor: pointer;
+    margin-top: -30px;
+    margin-right: -50px;
+    text-decoration: underline;
+    font-size: 10px;
+   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 850px) {
@@ -165,4 +178,16 @@ input {
     margin-right: auto;
     width: fit-content;
   }
+  #Submit,
+  .btn {
+    margin-left: -10px;
+    border-radius: 10vh;
+  }
+  #feedback {
+    cursor: pointer;
+    margin-right: -10px;
+    margin-bottom: -9px;
+    text-decoration: underline;
+    font-size: 10px;
+   }
 }
