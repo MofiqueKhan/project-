@@ -1,26 +1,63 @@
 const quizDB = [
   {
-    Q: "Q1. What is the full form of HTML",
-    a: "Hello To My Land",
-    b: "Hey Text Markup Language",
-    c: "Hyper Text My Language",
-    d: "Hyper Text Markup Language",
-    ans: "ans4",
-  },
-  {
-    Q: "Q2. What is the full form of CSS",
-    a: "Cascading Sheet Style",
-    b: "Cascading Style Sheet",
-    c: "Cascading Start Sheet",
-    d: "Cascading String Sheet",
+    Q: "Q1. Only one capital exists in South Africa",
+    a: "True",
+    b: "False",
     ans: "ans2",
   },
   {
-    Q: "Q3. What is the full form of JS",
-    a: "JavaScript",
-    b: "JavaSuper",
-    c: "JavaStyle",
-    d: "JustScript",
+    Q: "Q2. California is home to the “Desert of Death",
+    a: "True",
+    b: "False",
+    ans: "ans2",
+  },
+  {
+    Q: "Q3. The average human body consists of 60% water",
+    a: "True",
+    b: "False",
+    ans: "ans1",
+  },
+  {
+    Q: "Q4. The liver is the largest internal organ in the human body. ",
+    a: "True",
+    b: "False",
+    ans: "ans1",
+  },
+
+  {
+    Q: "Q5. The human eyes can observe 10 million different colors.",
+    a: "True",
+    b: "False",
+    ans: "ans1",
+  },
+  {
+    Q: "Q6. Humans lose an an average of 75 strands of hair per week. ",
+    a: "True",
+    b: "False",
+    ans: "ans2",
+  },
+  {
+    Q: "Q7. The Golden State Warriors won the 2020 NBA championship.",
+    a: "True",
+    b: "False",
+    ans: "ans2",
+  },
+  {
+    Q: "Q8. KPI is a short form for Key Performance Indicator.",
+    a: "True",
+    b: "False",
+    ans: "ans1",
+  },
+  {
+    Q: "Q9. The blue whale is the biggest animal to have ever lived.",
+    a: "True",
+    b: "False",
+    ans: "ans1",
+  },
+  {
+    Q: "Q10. Mount Everest is the tallest mountain in the world.",
+    a: "True",
+    b: "False",
     ans: "ans1",
   },
 ];
@@ -30,13 +67,6 @@ const title = document.querySelector("#title");
 // target Answers field;
 const option1 = document.querySelector("#option1");
 const option2 = document.querySelector("#option2");
-const option3 = document.querySelector("#option3");
-const option4 = document.querySelector("#option4");
-const answers = document.querySelectorAll(".answer");
-// Select Option
-const MCQ = document.querySelector('#MCQ').value;
-const trueFalse = document.querySelector("#True-False");
-const Math = document.querySelector("#Math");
 // target Scoring box;
 const showScore = document.querySelector("#showScore");
 // target Submit Button;
@@ -53,8 +83,6 @@ const loadQuestion = () => {
   title.innerHTML = quizDB[questionCount].Q;
   option1.innerHTML = quizDB[questionCount].a;
   option2.innerHTML = quizDB[questionCount].b;
-  option3.innerHTML = quizDB[questionCount].c;
-  option4.innerHTML = quizDB[questionCount].d;
 };
 loadQuestion();
 
@@ -106,14 +134,3 @@ feedBack.addEventListener("click", (homePage) => {
     alert("Thank You For Your Attention");
   }
 });
-
-// Open True-False Quiz File
-function categoryChange() {
-  var selectedCategory = document.getElementById("categories").value;
-  if (selectedCategory == "True-False") {
-    window.location.href = "../html/true-false.html";
-  }
-  if (selectedCategory == 'Math') {
-    window.location.href = '../html/Math.html';
-  }
-}

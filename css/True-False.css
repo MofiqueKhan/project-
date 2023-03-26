@@ -45,8 +45,7 @@ body {
 }
 
 input {
-  cursor: pointer;
-  width: 1.5rem;
+width: 1.6rem;
 }
 
 #Submit,
@@ -77,7 +76,7 @@ input {
 #showScore {
   background-color: #dfe6e9;
   margin-top: 2rem;
-  margin-bottom: -2rem;
+  margin-bottom: -2.7rem;
   padding: 1rem 1rem;
   box-shadow: 0 1rem 1rem -0.8rem rgba(0, 0, 0, 0.6);
 }
@@ -108,21 +107,6 @@ h3 {
   color: lightblue;
 }
 
-#categories {
-  margin-top: 4px;
-  margin-right: 0.7rem;
-  float: right;
-  border-radius: 1rem;
-  padding: 5px;
-  box-shadow: 0 1rem 1rem -0.6rem rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-#categories option {
-  font-size: 15px;
-  background-color: lightcoral;
-}
-
 @media screen and (max-width: 480px) and (min-width: 0px) {
   * {
     margin: 0;
@@ -138,10 +122,7 @@ h3 {
   }
 
   .inner-div {
-    width: auto;
-    height: auto;
-    margin-left:  10px;
-    margin-right: 10px;
+    width: 50vh;
   }
 
   .inner-div h2 {
@@ -164,15 +145,13 @@ h3 {
 
   #Submit,
   .btn {
-    margin-left: -25px;
+    margin-left: 120px;
     border-radius: 10vh;
     box-shadow: 0 1.1rem 1.3rem -0.8rem;
-    margin-bottom: 1px;
   }
 
   #Submit:hover {
-    font-size: 0.9rem;
-    transition: all 0.1ms ease-in-out 0.1s;
+    font-size: 1.1rem;
   }
 
   #showScore {
@@ -186,14 +165,6 @@ h3 {
   .scoreArea {
     display: none;
   }
-
-  #feedback {
-    cursor: pointer;
-    margin-top: -30px;
-    margin-right: -50px;
-    text-decoration: underline;
-    font-size: 10px;
-   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 850px) {
@@ -205,16 +176,4 @@ h3 {
     margin-right: auto;
     width: fit-content;
   }
-  #Submit,
-  .btn {
-    margin-left: -10px;
-    border-radius: 10vh;
-  }
-  #feedback {
-    cursor: pointer;
-    margin-right: -10px;
-    margin-bottom: -9px;
-    text-decoration: underline;
-    font-size: 10px;
-   }
 }

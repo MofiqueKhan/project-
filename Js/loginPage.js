@@ -2,20 +2,11 @@ const userName = document.querySelector(".UserName").value;
 const password = document.querySelector(".password").value;
 const submitButton = document.querySelector("#Submit-button");
 
-// ----- Occur Click Event ------
-submitButton.addEventListener("click", (page) => {
-  page.preventDefault();
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
 
-  if (userName.trim() === '' && password.trim() === '') {
-   return alert("Please Fill all Details");
+  const userConfrim = confirm("Login Successful");
+  if (userConfrim) {
+    window.location.href = "../html/quizPage.html";
   }
-
-  const redirect = confirm("Login Successful");
-  // ----- Redirect on next page -----
-  if(redirect){
-    window.location.href = '../html/quizPage.html';
-  }else{
-    window.location.href = '../html/quizPage.html';
-  }
-  
 });
