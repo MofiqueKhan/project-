@@ -69,11 +69,11 @@ const checkAnswer = () => {
   const userAnswer = parseInt(answer.value);
   if (userAnswer === quizDB[questionCount].ans) {
     Score++;
-    answer.value = '';
+    answer.value = "";
     return true;
   } else {
     incorrectAnswers++;
-    answer.value = '';
+    answer.value = "";
     return false;
   }
 };

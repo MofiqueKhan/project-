@@ -110,7 +110,7 @@ Submit.addEventListener("click", () => {
 
   if (checkAnswer === quizDB[Score].ans) {
     Score++;
-  generateRandomNum();
+    generateRandomNum();
   }
 
   questionCount++;
@@ -140,7 +140,6 @@ feedBack.addEventListener("click", (homePage) => {
   }
 });
 
-
 function categoryChange() {
   var selectedCategory = document.getElementById("categories").value;
   // open Math.html
@@ -161,9 +160,9 @@ function generateRandomNum() {
 
   while (isNumberExist) {
     randomNum = Math.floor(Math.random() * quizDB.length);
-   isNumberExist = repeatedNum.includes(randomNum);
+    isNumberExist = repeatedNum.includes(randomNum);
   }
   repeatedNum.push(randomNum);
   return randomNum;
-};
+}
 console.log(generateRandomNum());
