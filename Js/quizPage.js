@@ -175,6 +175,7 @@ function categoryChange() {
   if (selectedCategory == "True-False") {
     window.location.href = "../html/true-false.html";
   }
+  // open Math.html
   if (selectedCategory == "Math") {
     window.location.href = "../html/Math.html";
   }
