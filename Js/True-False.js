@@ -67,7 +67,7 @@ const title = document.querySelector("#title");
 // target Answers field;
 const option1 = document.querySelector("#option1");
 const option2 = document.querySelector("#option2");
-const answers = document.querySelectorAll('.answer');
+const answers = document.querySelectorAll(".answer");
 // target Scoring box;
 const showScore = document.querySelector("#showScore");
 // target Submit Button;
@@ -110,6 +110,7 @@ Submit.addEventListener("click", () => {
 
   if (checkAnswer === quizDB[Score].ans) {
     Score++;
+  generateRandomNum();
   }
 
   questionCount++;
@@ -138,3 +139,18 @@ feedBack.addEventListener("click", (homePage) => {
     alert("Thank You For Your Attention");
   }
 });
+
+let repeatedNum = [];
+function generateRandomNum() {
+  let randomNum = Math.floor(Math.random() * quizDB.length);
+
+  let isNumberExist = repeatedNum.includes(randomNum);
+
+  while (isNumberExist) {
+    randomNum = Math.floor(Math.random() * quizDB.length);
+   isNumberExist = repeatedNum.includes(randomNum);
+  }
+  repeatedNum.push(randomNum);
+  return randomNum;
+};
+console.log(generateRandomNum());
