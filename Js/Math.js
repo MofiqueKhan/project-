@@ -69,9 +69,11 @@ const checkAnswer = () => {
   const userAnswer = parseInt(answer.value);
   if (userAnswer === quizDB[questionCount].ans) {
     Score++;
+    answer.value = '';
     return true;
   } else {
     incorrectAnswers++;
+    answer.value = '';
     return false;
   }
 };
@@ -85,9 +87,8 @@ Submit.addEventListener("click", () => {
   } else {
     questionCount++;
   }
-
+  // load next question
   if (questionCount < quizDB.length) {
-    // load next question
     loadQuestion();
   } else {
     // show the score
@@ -105,6 +106,4 @@ Submit.addEventListener("click", () => {
       console.log(userThought);
     });
   }
-  // clear the input field
-  answer.value = "";
 });
