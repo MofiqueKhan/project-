@@ -67,6 +67,7 @@ const title = document.querySelector("#title");
 // target Answers field;
 const option1 = document.querySelector("#option1");
 const option2 = document.querySelector("#option2");
+const answers = document.querySelectorAll('.answer');
 // target Scoring box;
 const showScore = document.querySelector("#showScore");
 // target Submit Button;
@@ -121,6 +122,9 @@ Submit.addEventListener("click", () => {
     // Show Score which is user was select;
     showScore.innerHTML = `<h3>You Scored ${Score} / ${quizDB.length}</h3>
     <button class='btn' onclick='location.reload()'> Play Again </button>`;
+    showScore.style.display = "block";
+    // hide the submit button
+    Submit.style.display = "none";
   }
 });
 

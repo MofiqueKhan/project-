@@ -84,6 +84,8 @@ input {
 
 h3 {
   text-align: center;
+  margin-top: -10px;
+  margin-left: 20px;
 }
 
 .btn {
@@ -100,7 +102,7 @@ h3 {
   cursor: pointer;
   border: none;
   float: right;
-  margin-top: 3px;
+  margin-top: -12px;
   text-decoration: underline;
 }
 
