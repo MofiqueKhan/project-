@@ -69,11 +69,11 @@ const checkAnswer = () => {
   const userAnswer = parseInt(answer.value);
   if (userAnswer === quizDB[questionCount].ans) {
     Score++;
-    answer.value = '';
+    answer.value = "";
     return true;
   } else {
     incorrectAnswers++;
-    answer.value = '';
+    answer.value = "";
     return false;
   }
 };
@@ -107,3 +107,15 @@ Submit.addEventListener("click", () => {
     });
   }
 });
+
+function categoryChange() {
+  var selectedCategory = document.getElementById("categories").value;
+  // open true-false.html
+  if (selectedCategory == "True-False") {
+    window.location.href = "../html/true-false.html";
+  }
+  // open Quiz.html
+  if (selectedCategory == "MCQ") {
+    window.location.href = "../html/quizPage.html";
+  }
+}

@@ -112,6 +112,20 @@ h3 {
   color: lightblue;
 }
 
+#categories {
+  margin-top: 4px;
+  margin-right: 0.7rem;
+  float: right;
+  border-radius: 1rem;
+  padding: 4px;
+  box-shadow: 0 1rem 1rem -0.6rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#categories option {
+  font-size: 15px;
+  background-color: lightcoral;
+}
 @media screen and (max-width: 480px) and (min-width: 0px) {
   * {
     margin: 0;

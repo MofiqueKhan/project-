@@ -164,9 +164,9 @@ const showQuizResult = () => {
   // Show Score which is user was select;
   showScore.innerHTML = `<h3>You Scored ${Score} / ${quizDB.length}</h3>
     <button class='btn' onclick='location.reload()'> Play Again </button>`;
-    showScore.style.display = "block";
-    // hide the submit button
-    Submit.style.display = "none";
+  showScore.style.display = "block";
+  // hide the submit button
+  Submit.style.display = "none";
 };
 
 // Open True-False Quiz File
@@ -175,6 +175,7 @@ function categoryChange() {
   if (selectedCategory == "True-False") {
     window.location.href = "../html/true-false.html";
   }
+  // open Math.html
   if (selectedCategory == "Math") {
     window.location.href = "../html/Math.html";
   }
