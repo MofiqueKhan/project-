@@ -1,5 +1,3 @@
-// target Question field;
-const title = document.querySelector("#title");
 // target Answers field;
 const option1 = document.querySelector("#option1");
 const option2 = document.querySelector("#option2");
@@ -20,48 +18,71 @@ const feedBack = document.querySelector("#feedback");
 let Score = 0;
 let questionCount = 0;
 
-// ---- Change Options and Start Timer ------
-const loadQuestion = () => {
-  // load questions and options
-  title.innerHTML = quizDB[questionCount].Q;
-  option1.innerHTML = quizDB[questionCount].a;
-  option2.innerHTML = quizDB[questionCount].b;
-  option3.innerHTML = quizDB[questionCount].c;
-  option4.innerHTML = quizDB[questionCount].d;
-};
-loadQuestion();
-
-// --- get the id of what input user was select ---;
-const getAnswer = () => {
-  let answer;
-  answers.forEach((curElem) => {
-    if (curElem.checked) {
-      answer = curElem.id;
-    }
+function generateInput(inputOptions) {
+  const input = document.createElement("input");
+  Object.keys(inputOptions).forEach((eachKey) => {
+    input[eachKey] = inputOptions[eachKey];
   });
-  return answer;
-};
+  return input;
+}
 
-// deSelect options for next question;
-const deSelect = () => {
-  answers.forEach((element) => (element.checked = false));
+function generateLabel(labelOptions) {
+  const label = document.createElement("label");
+  Object.keys(labelOptions).forEach((eachKey) => {
+    label[eachKey] = labelOptions[eachKey];
+  });
+  return label;
+}
+
+function generateMCQs(currentQuestion) {
+  const ul = document.createElement("ul");
+  for (let i = 0; i <= 3; i++) {
+    const li = document.createElement("li");
+    const inputOptions = {
+      type: "radio",
+      class: "answer",
+      id: `ans${i + 1}`,
+      value: currentQuestion.options[i],
+    };
+    const input = generateInput(inputOptions);
+
+    const labelOptions = {
+      for: `ans${i + 1}`,
+      id: `option${i + 1}`,
+      value: String.fromCharCode(65 + i),
+    };
+    const label = generateLabel(labelOptions);
+    li.append(input, label);
+    ul.append(li);
+  }
+  return ul;
+}
+
+// ---- Change Options and Start Timer ------
+const loadQuestion = (quiz) => {
+  const currentQuiz = quiz[questionCount];
+  // target Question field;
+  const title = document.querySelector("#title");
+  title.innerText = currentQuiz.Q;
+  // load questions and options
+  const currentQues = generateMCQs(currentQuiz);
 };
+loadQuestion(quiz);
 
 // check whose input user was select;
-Submit.addEventListener("click", () => {
-  const checkAnswer = getAnswer();
-  console.log(checkAnswer);
+Submit.addEventListener("click", (event) => {
+  const userAnswer = event.target.innerText;
+  console.log(userAnswer);
 
-  if (checkAnswer === quizDB[Score].ans) {
+  if (userAnswer === quizDB[questionCount].ans) {
     Score++;
   }
 
   questionCount++;
-  deSelect();
 
   // ----- Load next Question -----
   if (questionCount < quizDB.length) {
-    loadQuestion();
+    loadQuestion(quiz);
   } else {
     showQuizResult();
   }
@@ -72,7 +93,7 @@ feedBack.addEventListener("click", (homePage) => {
   homePage.preventDefault();
 
   const userThouht = prompt("Please Give Your Thoughts");
-  if (userThouht) {
+  if (!!userThouht) {
     console.log(userThouht);
     alert("Thank You For Your Attention");
   }
@@ -90,12 +111,12 @@ const showQuizResult = () => {
 
 // Open True-False Quiz File
 function categoryChange() {
-  var selectedCategory = document.getElementById("categories").value;
-  if (selectedCategory == "True-False") {
+  const selectedCategory = document.getElementById("categories").value;
+  if (selectedCategory === "True-False") {
     window.location.href = "../html/true-false.html";
   }
   // open Math.html
-  if (selectedCategory == "Math") {
+  if (selectedCategory === "Math") {
     window.location.href = "../html/Math.html";
   }
 }
