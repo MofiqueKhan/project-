@@ -1,6 +1,6 @@
 const quizDB = [
   {
-    Q: "Q1. Filaria is caused by",
+    Q: "Filaria is caused by",
     a: "Bacteria",
     b: "Mosquito",
     c: "Protozoa",
@@ -8,7 +8,7 @@ const quizDB = [
     ans: "ans2",
   },
   {
-    Q: "Q2. Golf player Vijay Singh belongs to which country?",
+    Q: "Golf player Vijay Singh belongs to which country?",
     a: "USA",
     b: "Fiji",
     c: "India",
@@ -16,7 +16,7 @@ const quizDB = [
     ans: "ans2",
   },
   {
-    Q: "Q3. What command is used to remove the directory?",
+    Q: "What command is used to remove the directory?",
     a: "rdir",
     b: "remove",
     c: "rmdir",
@@ -24,15 +24,7 @@ const quizDB = [
     ans: "ans3",
   },
   {
-    Q: "Q4. What is the full form of HTML",
-    a: "Hello To My Land",
-    b: "Hey Text Markup Language",
-    c: "Hyper Text My Language",
-    d: "Hyper Text Markup Language",
-    ans: "ans4",
-  },
-  {
-    Q: "Q5.For which of the following disciplines is Nobel Prize awarded?",
+    Q: "or which of the following disciplines is Nobel Prize awarded?",
     a: "Physics and Chemistry",
     b: "Physiology or Medicine",
     c: "Literature, Peace and Economics",
@@ -40,15 +32,7 @@ const quizDB = [
     ans: "ans4",
   },
   {
-    Q: "Q6. What is the full form of CSS",
-    a: "Cascading Sheet Style",
-    b: "Cascading Style Sheet",
-    c: "Cascading Start Sheet",
-    d: "Cascading String Sheet",
-    ans: "ans2",
-  },
-  {
-    Q: "Q7.The landmass of which of the following continents is the least?",
+    Q: "he landmass of which of the following continents is the least?",
     a: "Africa",
     b: "Physiology or Medicine",
     c: "Australia",
@@ -56,27 +40,12 @@ const quizDB = [
     ans: "ans3",
   },
   {
-    Q: "Q8.The landmass of which of the following continents is the least?",
+    Q: "he landmass of which of the following continents is the least?",
     a: "Africa",
     b: "Physiology or Medicine",
     c: "Australia",
     d: "Europe",
     ans: "ans3",
-  },
-  {
-    Q: "Q9. What is the full form of JS",
-    a: "JavaScript",
-    b: "JavaSuper",
-    c: "JavaStyle",
-    d: "JustScript",
-    ans: "ans1",
-  },
-  {
-    Q: "Q10. What is the capital of Poland",
-    a: "Krakow",
-    b: "Poznań",
-    c: "Warsaw",
-    d: "Wrocław",
   },
 ];
 // target Question field;
